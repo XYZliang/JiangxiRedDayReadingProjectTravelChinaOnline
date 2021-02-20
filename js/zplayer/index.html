@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/zplayer.min.css" />
+		<script type="text/javascript" src="js/zplayer.min.js" ></script>
+		<title>音</title>
+	</head>
+	<body>
+		<div style="width: 95%;">
+			<div id="player1"></div>
+		</div>
+		<script>
+		 	var zp1 = new zplayer({
+		        element: document.getElementById("player1"),
+				autoPlay: 0,/*是否开启自动播放,默认false*/
+		        lrcStart: 1,/*是否开启歌词功能 ，默认false（为true时musics集合中需要传入lrc字段。）*/
+		        showLrc: 1,/*开启歌词功能后是否展示歌词内容 ，默认false*/
+		        fixed:0, /*是否固定在底部，默认false*/
+		        listFolded:0, /*列表是否折叠，默认false*/
+		        listMaxHeight:300, /*列表最大高度，默认240*/
+		        musics: [{
+		            title: "钢琴曲：《我和我的祖国》",
+		            author: "云游项目组",
+		            url: "http://music.163.com/song/media/outer/url?id=1393412236.mp3",
+		            pic: "https://p2.music.126.net/Zb5KiFCiWS_3l8ODWGBuIQ==/109951164387935098.jpg?param=300y300",
+					lrc: "* [ti:龙的传人] [00:05.68]纯音乐"
+		        },{
+	                title: "龙的传人",
+	                author: "云游项目组",
+	                url: "http://music.163.com/song/media/outer/url?id=431551124.mp3",
+	                pic: "https://p1.music.126.net/JtLIbiUDTCmEl7N1JZgFkQ==/17779103021488698.jpg?param=300y300",
+	                lrc: "* [ti:龙的传人] [00:23.68]遥远的东方有一条江 [00:28.24]它的名字就叫长江 [00:32.92]遥远的东方有一条河 [00:37.56]它的名字就叫黄河 [00:42.31]古老的东方有一条龙 [00:46.98]它的名字就叫中国 [00:51.63]古老的东方有一群人 [00:56.31]他们全都是龙的传人 [01:00.98]巨龙脚底下我成长 [01:05.55]长成以后是龙的传人 [01:10.15]黑眼睛 黑头发 黄皮肤 [01:14.79]永永远远是龙的传人 [01:19.58]遥远的东方有一条江 [01:24.17]它的名字就叫长江 [01:28.85]遥远的东方有一条河 [01:33.47]它的名字就叫黄河 [01:38.12]它的名字就叫黄河 [01:42.71]虽不曾看见长江美 [01:47.50]梦里常神游长江水 [01:52.03]虽不曾听见黄河壮 [01:56.63]澎湃汹涌在梦里 [02:01.47]古老的东方有一条龙 [02:06.21]它的名字就叫中国 [02:10.82]古老的东方有一群人 [02:15.40]他们全都是龙的传人 [02:20.22]他们全都是龙的传人 [02:25.08]他们全都是龙的传人 [02:28.36]Rap: [02:31.67]now here's a story that'll makes u cry [02:33.81]straight from Taiwan they came just a girl & a homeboy in love [02:35.69]no $ no speak no English [02:39.03]nobody gonna give'em the time of day in a city so cold [02:40.82]they made a wish & then they had the strength 2 graduate w/ honor [02:43.41]& borrowed 50 just 2 communicate a marriage [02:45.81]under GOD who never left their side game their children pride [02:47.54]raise ur voices high love will never die never dir... [02:52.48]多年前宁静的一个夜 [02:57.23]我们全家人到了纽约 [03:01.99]野火呀烧不尽在心间 [03:06.54]每夜每天对家的思念 [03:11.25]每夜每天对家的思念 [03:15.87]别人土地上我成长 [03:20.49]长成以后是龙的传人 [03:25.11]巨龙巨龙你擦亮眼 [03:29.76]永永远远的擦亮眼 [03:34.76]巨龙巨龙你擦亮眼 [03:39.35]永永远远的擦亮眼 [03:44.05]巨龙巨龙你擦亮眼 [03:48.62]永永远远的擦亮眼 [03:53.25]巨龙巨龙你擦亮眼 [03:58.01]永永远远的擦亮眼 [04:02.62]巨龙巨龙你擦亮眼 [04:07.19]永永远远的擦亮眼 [04:11.81] "
+	            }]
+		    })
+			
+			/* 暂停 */
+			document.getElementById("pause").addEventListener("click",function(){
+				zp1.pause();
+			})
+			/* 暂停 */
+			document.getElementById("play").addEventListener("click",function(){
+				zp1.play();
+			})
+			//移除
+			document.getElementById("remove").addEventListener("click",function(){
+				zp1.remove(4);
+			})
+			
+		</script>
+	</body>
+</html>
